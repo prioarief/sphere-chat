@@ -74,25 +74,27 @@ const ChatPage = () => {
   return (
     <div className="flex h-screen fixed w-full font-sans">
       <div
-        className={`lg:w-1/4 w-${
+        className={`xl:w-1/4 w-${
           Room?.id ? '0' : 'full'
         } overflow-y-scroll shadow-lg`}
       >
         <div className="flex flex-row items-center justify-between bg-gray-800 p-3 drop-shadow-md">
           <h1 className="text-white font-mono">ChatSphere</h1>
-          <BsThreeDotsVertical
-            className="text-white cursor-pointer"
+          <div
+            className="p-4 cursor-pointer"
             onClick={() => setOpenPopUp(!OpenPopUp)}
-          />
+          >
+            <BsThreeDotsVertical className="text-white text-[15px]" />
+          </div>
         </div>
         {OpenPopUp && (
           <div className="relative">
-            <div className="absolute z-[100] rounded-b-md text-[12px] top-0 right-0 shadow-md p-2 bg-gray-800 text-white font-sans">
+            <div className="absolute z-[100] rounded-b-md text-[14px] top-0 right-0 shadow-md p-2 bg-gray-800 text-white font-sans">
               <ul>
-                <li className="py-1 cursor-pointer hover:bg-gray-700">
+                <li className="py-1 px-3 cursor-pointer hover:bg-gray-700">
                   Profil
                 </li>
-                <li className="py-1 cursor-pointer hover:bg-gray-700">
+                <li className="py-1 px-3 cursor-pointer hover:bg-gray-700">
                   Logout
                 </li>
               </ul>
