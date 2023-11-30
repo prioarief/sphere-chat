@@ -71,12 +71,14 @@ const ChatPage = () => {
     setMessage('');
   };
 
+  // alert(`xl:w-1/4 w-${Room?.id ? '0' : 'full'} overflow-y-scroll shadow-lg`);
+
   return (
     <div className="flex h-screen fixed w-full font-sans">
       <div
-        className={`xl:w-1/4 w-${
+        className={`w-${
           Room?.id ? '0' : 'full'
-        } overflow-y-scroll shadow-lg`}
+        } xl:w-1/4 overflow-y-scroll shadow-lg`}
       >
         <div className="flex flex-row items-center justify-between bg-gray-800 p-3 drop-shadow-md">
           <h1 className="text-white font-mono">ChatSphere</h1>
